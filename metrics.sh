@@ -9,7 +9,7 @@ if [ ! -d ${PATH_RESULTS} ]; then
   mkdir ${PATH_RESULTS}
 fi
 
-# DKI
+# dmri
 # ==============================================================================
 cd dki
 # Concatenate left and right CSTs from PAM50 atlas
