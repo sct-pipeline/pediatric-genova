@@ -9,8 +9,17 @@ The following metric is output:
 
 - **dmri**: All DTI (FA, MD, AD, RD) and DKI (KFA, MK, AK, RK) in whole WM, GM and CSTs tracts, averaged across slices
 # Dependencies 
-This pipeline was tested on SCT v4.1.0. This pipeline also relies on dipy v.1.1.0 for computation of DTI and DKI measures (https://dipy.org/documentation/1.1.0./examples_built/reconst_dki/.
+This pipeline was tested on SCT v4.1.0. This pipeline also relies on dipy v.1.1.0 for computation of DTI and DKI measures (https://dipy.org/documentation/1.1.0./examples_built/reconst_dki/).
 # Data structure
+```data
+  |- 001
+  |- 002
+  |- 003
+      |- mt
+        |- mt1.nii.gz
+        |- mt0.nii.gz
+        |- t1w.nii.gz```
+        
 # How to run         
 # Contributors
 Rosella Trò, Julien Cohen-Adad
