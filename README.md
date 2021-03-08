@@ -33,5 +33,7 @@ data
     - ```SUBJECTS```: List of subjects to analyze. If you want to analyze all subjects in the ```PATH_DATA``` folder, then comment this variable.
     - ```METRICS_VERT_LEVEL```: Vertebral levels to compute MRI metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    ```METRICS_VERT_LEVEL="2,3,4,5"```.
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
+    - ![image](https://user-images.githubusercontent.com/58302565/110314694-7bcc1c80-8008-11eb-8ffa-05c598563fa4.png)
+
 # Contributors
 Rosella Trò, Julien Cohen-Adad
