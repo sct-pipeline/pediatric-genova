@@ -1,5 +1,5 @@
 #!/bin/bash
-# Configuration file for your study.
+# Script for setting configuration file for your study.
 # Copy this file and rename it as `parameters.sh`, then modify the variables
 # according to your needs.
 
@@ -18,6 +18,7 @@ export SUBJECTS=(
 	"003"
 	"004"
 	)
+	
 # Cropping boundaries along the three axes
 export X_min="60"
 export X_max="100"
