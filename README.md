@@ -1,7 +1,7 @@
 # Pediatric-Genova
 Image analysis pipeline for processing neonatal Spinal Cord diffusion MRI data from University of Genoa in collaboration with Gaslini Children's Hospital.
 An overview of our image processing pipeline highlighting key features is shown in Figure 1. Since SCT algorithms are validated in adult imaging, we specifically customized each processing step to our neonatal scans in order to apply and advanced dMRI model such as DKI. Main steps of our pipeline concern motion correction, segmentation, vertebral labeling, registration with PAM50 atlas and computation of diffusion measures in specific ROIs. An overview of our image processing pipeline highlighting key features is shown in the image below. 
-![1_def](https://user-images.githubusercontent.com/58302565/110312925-08c1a680-8006-11eb-973d-4c4c572aaaff.png)
+![1_def](https://user-images.githubusercontent.com/58302565/110313072-3ad30880-8006-11eb-9ac6-e3b9ed968d7d.png)
 
 This pipeline will loop across all subjects (or only the subjects that you have specified) located under the ```data``` folder and results will be concatenated into single csv files where each row will correspond to a subject. The files will be output in the ```data``` folder.
 
