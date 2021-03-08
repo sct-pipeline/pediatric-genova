@@ -21,9 +21,9 @@ sct_maths -i ${file_seg} -mul label/atlas/cst.nii.gz  -o segm_cst.nii.gz
 # Extract mean DTI and DKI metrics along WM ang GM and CSTs in each level prescribed by METRICS_VERT_LEVEL
 # tips: we specify vertebral levels C1-C4 because outside of these levels the registration is inaccurrate and/or MRI signal is corrupted
 for metric in dki_FA dki_MD dki_AD dki_RD KFA MK AK RK ; do
-  sct_extract_metric -i ${metric}.nii.gz -f segm_gm.nii.gz -vert ${METRICS_VERT_LEVEL} -vertfile label/template/PAM50_levels.nii.gz -o ${PATH_RESULTS}/${metric}_gm.csv -append 1
-  sct_extract_metric -i ${metric}.nii.gz -f segm_wm.nii.gz -vert ${METRICS_VERT_LEVEL} -vertfile label/template/PAM50_levels.nii.gz -o ${PATH_RESULTS}/${metric}_wm.csv -append 1
-  sct_extract_metric -i ${metric}.nii.gz  -f segm_cst.nii.gz -vert ${METRICS_VERT_LEVEL} -vertfile label/template/PAM50_levels.nii.gz -o ${PATH_RESULTS}/${metric}_cst.csv -append 1
+  sct_extract_metric -i ${metric}.nii.gz -f segm_gm.nii.gz -vert ${METRICS_VERT_LEVEL} -vertfile label/template/PAM50_levels.nii.gz -o ${PATH_RESULTS}/${metric}_gm.csv 
+  sct_extract_metric -i ${metric}.nii.gz -f segm_wm.nii.gz -vert ${METRICS_VERT_LEVEL} -vertfile label/template/PAM50_levels.nii.gz -o ${PATH_RESULTS}/${metric}_wm.csv 
+  sct_extract_metric -i ${metric}.nii.gz  -f segm_cst.nii.gz -vert ${METRICS_VERT_LEVEL} -vertfile label/template/PAM50_levels.nii.gz -o ${PATH_RESULTS}/${metric}_cst.csv 
 done
 cd ..
 
