@@ -32,8 +32,10 @@ data
     - ```METRICS_VERT_LEVEL```: Vertebral levels to compute MRI metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    ```METRICS_VERT_LEVEL="2,3,4,5"```.
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
 # Results 
+Main outcomes of our neonatal pipeline are listed as follows.
+This includes registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
 ![image](https://user-images.githubusercontent.com/58302565/110314859-b59d2300-8008-11eb-90d1-fcd8ab4b0860.png)
-
+And also computation of DTI and DKI maps for further extraction of their averages over specific ROIs:
 ![image](https://user-images.githubusercontent.com/58302565/110314694-7bcc1c80-8008-11eb-8ffa-05c598563fa4.png)
 # Contributors
 Rosella Trò, Julien Cohen-Adad
