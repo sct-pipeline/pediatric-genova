@@ -22,18 +22,18 @@ for v in range (data.shape[-1]):
 	data_smooth[...,v]=gaussian_filter(data[...,v], sigma=gauss_std)
 dkimodel=dki.DiffusionKurtosisModel(gtab)
 dkifit=dkimodel.fit(data_smooth, mask=mask)
-FA=dkifit.fa
 MD=dkifit.md
 AD=dkifit.ad
 RD=dkifit.rd
+FA=dkifit.fa
 MK=dkifit.mk(0,3)
 AK=dkifit.ak(0,3)
 RK=dkifit.rk(0,3)
 KFA=dkifit.kfa
-save_nifti('dki_FA.nii.gz',FA,affine)
 save_nifti('dki_MD.nii.gz',MD,affine)
 save_nifti('dki_AD.nii.gz',AD,affine)
 save_nifti('dki_RD.nii.gz',RD,affine)
+save_nifti('dki_FA.nii.gz',FA,affine)
 save_nifti('MK.nii.gz',MK,affine)
 save_nifti('AK.nii.gz',AK,affine)
 save_nifti('RK.nii.gz',RK,affine)
