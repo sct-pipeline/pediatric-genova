@@ -25,13 +25,13 @@ data
         
 # How to run      
 - Organize your data as indicated above
-- Download (or git clone) this repository.
-- Go to the repository folder: cd multiparametric-fixed-fov
-- Copy the file parameters_template.sh and rename it as parameters.sh.
+- Download (or ```git clone```) this repository.
+- Go to the repository folder: ```cd multiparametric-fixed-fov```
+- Copy the file ```parameters_template.sh``` and rename it as ```parameters.sh```.
 - Edit the file parameters.sh and modify the variables according to your needs:
-    - PATH_DATA: Absolute path to the DATA folder. E.g.: /Users/bob/data
-    - SUBJECTS: List of subjects to analyze. If you want to analyze all subjects in the PATH_DATA folder, then comment this variable.
-    - METRICS_VERT_LEVEL: Vertebral levels to compute MRI metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    METRICS_VERT_LEVEL="2,3,4,5".
-    - PATH_RESULTS: Path where results will be stored. Default is: $PATH_DATA/results
+    - ```PATH_DATA```: Absolute path to the DATA folder. E.g.: ```/Users/bob/data```
+    - ```SUBJECTS```: List of subjects to analyze. If you want to analyze all subjects in the ```PATH_DATA``` folder, then comment this variable.
+    - ```METRICS_VERT_LEVEL```: Vertebral levels to compute MRI metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    ```METRICS_VERT_LEVEL="2,3,4,5"```.
+    - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
 # Contributors
 Rosella Trò, Julien Cohen-Adad
