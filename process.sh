@@ -10,7 +10,7 @@ Green='\033[0;92m'
 Red='\033[0;91m'
 On_Black='\033[40m'
 
-# DKI
+# dmri
 # ==============================================================================
 cd dki
 # Crop image, assuming the cord is roughtly centered in the FOV, and knowing that slices below a certain slice are not usable due to poor image quality
