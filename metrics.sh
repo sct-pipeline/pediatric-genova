@@ -9,15 +9,15 @@ if [ ! -d ${PATH_RESULTS} ]; then
   mkdir ${PATH_RESULTS}
 fi
 
-# dki
+# DKI
 # ==============================================================================
 cd dki
-#Concatenate left and right CSTs from PAM50 atlas
-fslmaths label/atlas/PAM50_atlas_05.nii.gz -add label/atlas/PAM50_atlas_04.nii.gz label/atlas/cst.nii.gz
+# Concatenate left and right CSTs from PAM50 atlas
+fslmaths ./label/atlas/PAM50_atlas_05.nii.gz -add ./label/atlas/PAM50_atlas_04.nii.gz ./label/atlas/cst.nii.gz
 # Multiply segmentation dilated mask by specific atlas ROI -WM,GM & CSTs
-sct_maths -i kurtosis_crop_moco_dwi_mean_seg.nii.gz -mul /label/template/PAM50_gm.nii.gz  -o segm_gm.nii.gz
-sct_maths -i kurtosis_crop_moco_dwi_mean_seg.nii.gz -mul /label/template/PAM50_wm.nii.gz  -o segm_wm.nii.gz
-sct_maths -i kurtosis_crop_moco_dwi_mean_seg.nii.gz -mul /label/atlas/cst.nii.gz  -o segm_cst.nii.gz
+sct_maths -i ${file_seg} -mul ./label/template/PAM50_gm.nii.gz  -o ./segm_gm.nii.gz
+sct_maths -i kurtosis_crop_moco_dwi_mean_seg.nii.gz -mul ./label/template/PAM50_wm.nii.gz  -o ./segm_wm.nii.gz
+sct_maths -i kurtosis_crop_moco_dwi_mean_seg.nii.gz -mul ./label/atlas/cst.nii.gz  -o segm_cst.nii.gz
 # Extract mean DTI and DKI metrics along WM ang GM and CSTs in each level prescribed by METRICS_VERT_LEVEL
 # tips: we specify vertebral levels C1-C4 because outside of these levels the registration is inaccurrate and/or MRI signal is corrupted
 for metric in dki_FA dki_MD dki_AD dki_RD KFA MK AK RK ; do
