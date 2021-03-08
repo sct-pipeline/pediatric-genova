@@ -16,10 +16,11 @@ data
   |- 001
   |- 002
   |- 003
-      |- mt
-        |- mt1.nii.gz
-        |- mt0.nii.gz
-        |- t1w.nii.gz
+      |- dki
+        |- kurtosis.nii.gz
+        |- bvecs
+        |- bvals
+        |- 3dT1.nii.gz
 ```
         
 # How to run         
