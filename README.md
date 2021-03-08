@@ -1,7 +1,7 @@
 # Pediatric-Genova
 Image analysis pipeline for processing neonatal Spinal Cord diffusion MRI data from University of Genoa in collaboration with Gaslini Children's Hospital.
 
-This pipeline will loop across all subjects (or only the subjects that you have specified) located under the data folder and results will be concatenated into single csv files where each row will correspond to a subject. The files will be output in the data folder.
+This pipeline will loop across all subjects (or only the subjects that you have specified) located under the ```data``` folder and results will be concatenated into single csv files where each row will correspond to a subject. The files will be output in the ```data``` folder.
 
 The following metric is output:
 
