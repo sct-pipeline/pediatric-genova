@@ -35,6 +35,7 @@ data
     - ```SUBJECTS```: List of subjects to analyze. If you want to analyze all subjects in the ```PATH_DATA``` folder, then comment this variable.
     - ```METRICS_VERT_LEVEL```: Vertebral levels to compute diffusion metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    ```METRICS_VERT_LEVEL="2,3,4,5"```.
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
+    - 
    Once the file ```parameters.sh``` is configured, you can run the pipeline as follows:
     ```./run_process.sh kurtosis_def.sh```
     This script will do all the processing as well as extraction of metrics within specified labels and levels. 
