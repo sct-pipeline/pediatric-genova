@@ -36,10 +36,10 @@ data
     - ```METRICS_VERT_LEVEL```: Vertebral levels to compute diffusion metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    ```METRICS_VERT_LEVEL="2,3,4,5"```.
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
     - 
-   Once the file ```parameters.sh``` is configured, you can run the pipeline as follows:
+ Once the file ```parameters.sh``` is configured, you can run the pipeline as follows:
     ```./run_process.sh kurtosis_def.sh```
-    This script will do all the processing as well as extraction of metrics within specified labels and levels. 
-      A QC folder will be generated to check segmentation and template registration.
+ This script will do all the processing as well as extraction of metrics within specified labels and levels. 
+   A QC folder will be generated to check segmentation and template registration.
 # Results 
 Main outcomes of our neonatal pipeline are listed as follows.
 This includes registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
