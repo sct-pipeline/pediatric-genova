@@ -45,7 +45,9 @@ data
  This script will do all the processing. A QC folder will be generated to check segmentation and template registration.  
    - Quantify metrics
 
-   ```./run_process.sh process.sh ```
+   ```
+   ./run_process.sh metrics.sh 
+   ```
 
 which performs extraction of DTI and DKI metrics within specified labels and levels. 
 # Results 
