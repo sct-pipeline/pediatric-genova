@@ -14,7 +14,7 @@ On_Black='\033[40m'
 # ==============================================================================
 cd dki
 # Crop image, assuming the cord is roughtly centered in the FOV, and knowing that slices below a certain slice are not usable due to poor image quality
-sct_crop_image -i kurtosis.nii.gz -xmin ${X_min} -xmax ${X_max} -ymin ${Y_min} -ymax ${Y_max} -zmin ${Z_min} -zmax ${Z_max} -o kurtosis_crop.nii.gz
+sct_crop_image -i kurtosis.nii.gz -xmin $X_min -xmax $X_max -ymin $Y_min -ymax $Y_max -zmin $Z_min -zmax $Z_max -o kurtosis_crop.nii.gz
 # sct_crop_image -i kurtosis.nii.gz -g 1 # alternative algorithm if cropping boundaries change across subjects --> GUI
 # Motion correction
 sct_dmri_moco -i kurtosis_crop.nii.gz -bvec bvecs -bval bvals -x spline
