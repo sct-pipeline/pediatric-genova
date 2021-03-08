@@ -37,7 +37,9 @@ data
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
     
  Once the file ```parameters.sh``` is configured, you can run the pipeline as follows:  
-    ```./run_process.sh kurtosis_def.sh```  
+    ```
+    ./run_process.sh kurtosis_def.sh
+    ```  
  This script will do all the processing as well as extraction of metrics within specified labels and levels.   
  A QC folder will be generated to check segmentation and template registration.
 # Results 
