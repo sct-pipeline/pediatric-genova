@@ -37,13 +37,13 @@ data
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
     
  Once the file ```parameters.sh``` is configured, you can run the pipeline as follows:  
-   -Process the data
+   - Process the data
     
     ./run_process.sh process.sh
  
  
  This script will do all the processing. A QC folder will be generated to check segmentation and template registration.  
-   -Quantify metrics
+   - Quantify metrics
 
    ./run_process.sh process.sh 
 
