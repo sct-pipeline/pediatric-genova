@@ -1,4 +1,4 @@
-# Pediatric-Genova
+# pediatric-genova
 Image analysis pipeline for processing neonatal Spinal Cord diffusion MRI data from University of Genoa in collaboration with Gaslini Children's Hospital.  
   Since SCT algorithms are validated in adult imaging, we specifically customized each processing step to our neonatal scans in order to apply an advanced dMRI model such as DKI.
   Main steps of our pipeline concern motion correction, segmentation, vertebral labeling, registration with PAM50 atlas and computation of diffusion measures in specific ROIs.
@@ -33,6 +33,7 @@ data
 - Edit the file parameters.sh and modify the variables according to your needs:
     - ```PATH_DATA```: Absolute path to the DATA folder. E.g.: ```/Users/bob/data```
     - ```SUBJECTS```: List of subjects to analyze. If you want to analyze all subjects in the ```PATH_DATA``` folder, then comment this variable.
+    - ```X_min, X_max```: Cropping boundaries along x-axis. For example, if you want to set boundaries between 60 and 100 ,set these variables as    ```X_min="60"``` and ```X_max="100"```. The same for y- and z- axes.
     - ```METRICS_VERT_LEVEL```: Vertebral levels to compute diffusion metrics from. For example, if you want to extract metrics from levels 2, 3, 4 and 5, set this variable as    ```METRICS_VERT_LEVEL="2,3,4,5"```.
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
     
