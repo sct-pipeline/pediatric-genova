@@ -37,13 +37,17 @@ data
     - ```PATH_RESULTS```: Path where results will be stored. Default is: ```$PATH_DATA/results```
     
  Once the file ```parameters.sh``` is configured, you can run the pipeline as follows:  
+   -Process the data
     
-    
-    ./run_process.sh kurtosis_def.sh
+    ./run_process.sh process.sh
  
  
- This script will do all the processing as well as extraction of metrics within specified labels and levels.   
- A QC folder will be generated to check segmentation and template registration.
+ This script will do all the processing. A QC folder will be generated to check segmentation and template registration.  
+   -Quantify metrics
+
+   ./run_process.sh process.sh 
+
+which performs extraction of DTI and DKI metrics within specified labels and levels. 
 # Results 
 Main outcomes of our neonatal pipeline are listed as follows.
 This includes registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
