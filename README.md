@@ -5,7 +5,7 @@ Image analysis pipeline for processing of neonatal Spinal Cord diffusion MRI dat
   
   An overview of our image processing pipeline highlighting key features is shown in the image below. 
  <img src="https://user-images.githubusercontent.com/58302565/137514414-17ef1cee-594f-4459-a2d8-e6ca76a03f2b.jpg" width="700">
-This pipeline will loop across all subjects (or only the subjects that you have specified) located under the ```data``` folder and results will be concatenated into single csv files where each row will correspond to a subject. The files will be output in the ```data``` folder.
+  This pipeline will loop across all subjects (or only the subjects that you have specified) located under the ```data``` folder and results will be concatenated into single csv files where each row will correspond to a subject. The files will be output in the ```data``` folder.
 
 The following metric is output:
 - **dmri**: All DTI (FA, MD, AD, RD) and DKI (KFA, MK, AK, RK) in whole WM, GM and CSTs tracts, averaged across slices
