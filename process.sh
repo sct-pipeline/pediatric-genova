@@ -13,6 +13,8 @@ On_Black='\033[40m'
 # dmri
 # ==============================================================================
 cd dki
+# Denoise raw DKI image using Patch2Self default parameters
+python denoise_patch2self.py
 # Crop image, assuming the cord is roughtly centered in the FOV, and knowing that slices below a certain slice are not usable due to poor image quality
 sct_crop_image -i kurtosis_patch2self.nii.gz -xmin $X_min -xmax $X_max -ymin $Y_min -ymax $Y_max -zmin $Z_min -zmax $Z_max -o kurtosis_patch2self_crop.nii.gz
 # sct_crop_image -i kurtosis_patch2self.nii.gz -g 1 # alternative algorithm if cropping boundaries change across subjects --> GUI
