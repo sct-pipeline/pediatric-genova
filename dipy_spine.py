@@ -1,5 +1,5 @@
 #
-# Script for computing DTI and DKI measures. Tested on dipy v.1.1.1
+# Script for computing DTI and DKI measures. Tested on dipy v.1.4.1
 #
 # Author: Rosella Trò
 
