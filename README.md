@@ -1,7 +1,7 @@
 # pediatric-genova
 Image analysis pipeline for processing of neonatal Spinal Cord diffusion MRI data from University of Genoa in collaboration with Gaslini Children's Hospital.  
   Since SCT algorithms are validated in adult imaging, we specifically customized each processing step to our neonatal scans in order to apply an advanced dMRI model such as DKI.
-  Main steps of our pipeline concern motion correction, segmentation, vertebral labeling, registration with PAM50 atlas and computation of diffusion measures in specific ROIs.
+  Main steps of our pipeline concern denoising with recently proposed Patch2Self (https://dipy.org/documentation/1.4.1./examples_built/denoise_patch2self/), motion correction, segmentation, vertebral labeling, registration with PAM50 atlas and computation of diffusion measures in specific ROIs.
   
   An overview of our image processing pipeline highlighting key features is shown in the image below. 
 <img src="https://user-images.githubusercontent.com/58302565/137514414-17ef1cee-594f-4459-a2d8-e6ca76a03f2b.jpg" width="700">
@@ -9,9 +9,9 @@ Image analysis pipeline for processing of neonatal Spinal Cord diffusion MRI dat
   This pipeline will loop across all subjects (or only the subjects that you have specified) located under the ```data``` folder and results will be concatenated into single csv files where each row will correspond to a subject. The files will be output in the ```data``` folder.
 
 The following metric is output:
-- **dmri**: All DTI (FA, MD, AD, RD) and DKI (KFA, MK, AK, RK) in whole WM, GM and CSTs tracts, averaged across slices
+- **dmri**: All DTI (FA, MD, AD, RD) and DKI (KFA, MK, AK, RK) or MSDKI (MSK) in whole WM, GM and CSTs tracts, averaged across slices
 # Dependencies 
-This pipeline was tested on SCT v4.1.0. This pipeline also relies on dipy v.1.1.0 for computation of DTI and DKI measures (https://dipy.org/documentation/1.1.0./examples_built/reconst_dki/) and on FSL v5.0 for mathematical manipulation of images and FSLeyes for active quality control (QC) (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki).
+This pipeline was tested on SCT v4.1.0. This pipeline also relies on dipy v.1.4.1 for computation of DTI and DKI (https://dipy.org/documentation/1.1.0./examples_built/reconst_dki/) as well as MSDKI (https://dipy.org/documentation/1.4.1./examples_built/reconst_msdki/) measures, and on FSL v5.0 for mathematical manipulation of images and FSLeyes for active quality control (QC) (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki).
 # Data structure
 ```
 data
@@ -52,7 +52,11 @@ data
 which performs extraction of DTI and DKI metrics within specified labels and levels. 
 # Results 
 Main outcomes of our neonatal pipeline are listed as follows.
-This includes registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
+This includes denoising with Patch2Self method:
+
+<img src="https://user-images.githubusercontent.com/58302565/137516668-7b4ce9be-231e-46fc-9467-153dd30129d3.jpg" width="400">
+
+As well as registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
 
 <img src="https://user-images.githubusercontent.com/58302565/137515245-871c2cae-53d4-4246-a8fc-57fc050dcd47.jpg" width="400">
 
