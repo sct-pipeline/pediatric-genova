@@ -8,7 +8,7 @@ from dipy.io.image import load_nifti, save_nifti
 import numpy as np
 from dipy.denoise.patch2self import patch2self
 
-# Load
+# Load nifti image and GradientTable object with information about the b-values and b-vectors
 data, affine = load_nifti('kurtosis.nii.gz')
 bvals = np.loadtxt('bvals')
 print('Data Loaded!')
