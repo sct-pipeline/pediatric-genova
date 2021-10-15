@@ -54,7 +54,7 @@ which performs extraction of DTI and DKI metrics within specified labels and lev
 Main outcomes of our neonatal pipeline are listed as follows.
 This includes denoising with Patch2Self method:
 
-<img src="https://user-images.githubusercontent.com/58302565/137516668-7b4ce9be-231e-46fc-9467-153dd30129d3.jpg" width="400">
+<img src="https://user-images.githubusercontent.com/58302565/137516668-7b4ce9be-231e-46fc-9467-153dd30129d3.jpg" width="700">
 
 As well as registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
 
