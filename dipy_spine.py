@@ -15,12 +15,9 @@ from dipy.io.image import load_nifti
 from scipy.ndimage.filters import gaussian_filter
 from dipy.io.image import save_nifti 
 # Load nifti image and GradientTable object with information about the b-values and b-vectors
-data, affine = load_nifti('kurtosis.nii.gz')
+data, affine = load_nifti('kurtosis_patch2self_crop_moco.nii.gz')
 bvals, bvecs=read_bvals_bvecs('bvals', 'bvecs')
 gtab=gradient_table(bvals, bvecs)
-# Denoise raw data as first step, using default parameters, and save output for later use
-denoised_arr = patch2self(data, bvals, model='ols', shift_intensity=True, clip_negative_vals=False)
-save_nifti('kurtosis_patch2self_crop_moco.nii.gz', denoised_arr, affine)
 # Use dilated Spinal Cord mask obtained from segmentation to avoid unnecessary calculations on the background of the image
 mask, affine= load_nifti('kurtosis_patch2self_crop_moco_dwi_mean_seg_dil.nii.gz')
 # 3D Gaussian smoothing to suppress the effects of noise and artefacts before diffusion kurtosis fitting
