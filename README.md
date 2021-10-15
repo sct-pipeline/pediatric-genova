@@ -53,11 +53,12 @@ which performs extraction of DTI and DKI metrics within specified labels and lev
 # Results 
 Main outcomes of our neonatal pipeline are listed as follows.
 This includes registration with PAM50 atlas and automatic delineation of ROIs thanks to atlas-based approach:
-![Immagine 2021-10-15 174119](https://user-images.githubusercontent.com/58302565/137515245-871c2cae-53d4-4246-a8fc-57fc050dcd47.jpg){:height="80%" width="80%"}
 
+<img src="https://user-images.githubusercontent.com/58302565/137515245-871c2cae-53d4-4246-a8fc-57fc050dcd47.jpg" width="700">
 
 And also computation of DTI and DKI maps for further extraction of their averages over specific ROIs: 
-![Figure_1S](https://user-images.githubusercontent.com/58302565/137515377-604a3e67-4d63-4cf9-aa53-cecbed9fc24a.png)
+
+<img src="https://user-images.githubusercontent.com/58302565/137515377-604a3e67-4d63-4cf9-aa53-cecbed9fc24a.png" width="700">
 
 # Contributors
 Rosella Trò, Julien Cohen-Adad
